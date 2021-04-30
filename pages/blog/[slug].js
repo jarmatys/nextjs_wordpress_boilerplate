@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 import { getAllPostsWithSlug, getPost } from 'utils/api';
 
