@@ -26,9 +26,11 @@ const Navigation = () => {
         </div>
         <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
           <li>
-            <a className="text-sm text-gray-400 hover:text-gray-500" href="/">
-              Start
+            <Link href="/blog">
+              <a className="text-sm text-gray-400 hover:text-gray-500" >
+                Blog
             </a>
+            </Link>
           </li>
         </ul>
         <Link href="/login">
@@ -62,11 +64,12 @@ const Navigation = () => {
           <div>
             <ul>
               <li className="mb-1">
-                <a
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
-                  href="/">
-                  Start
+                <Link href="/blog">
+                  <a
+                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded">
+                    Blog
                 </a>
+                </Link>
               </li>
             </ul>
           </div>
