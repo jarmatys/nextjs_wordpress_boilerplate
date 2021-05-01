@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.padding {
+  padding: 25px;
+}
+
 .skew {
   display: none;
 }

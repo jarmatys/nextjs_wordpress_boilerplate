@@ -22,35 +22,36 @@ export async function getStaticProps({ params }) {
     const data = await getPost(params.slug);
 
     return {
+        revalidate: 30,
         props: {
             postData: data.post
         }
     };
 };
 
-export default function Slug({ postData }) {
+export default function BlogPage({ postData }) {
     const router = useRouter();
 
     if (!router.isFallback && !postData?.slug) {
         return <p>Hmm .. error</p>;
     }
 
-    return (
-        router.isFallback ? (
-            <h2>Loading</h2>
-        ) : (
-            <div>
-                <Head>
-                    <title>Article page</title>
-                    <link rel='icon' href='/favicon.ico' />
-                </Head>
+    if (router.isFallback) {
+        return <h2>Loading...</h2>
+    }
 
-                <main>
-                    <h1>{postData.title}</h1>
-                    <p>{formatDate(postData.date)}</p>
-                    <div dangerouslySetInnerHTML={{ __html: postData.content }} />
-                </main>
-            </div>
-        )
+    return (
+        <div>
+            <Head>
+                <title>{postData.title} - blog internetowy</title>
+                <link rel='icon' href='/favicon.ico' />
+            </Head>
+
+            <main>
+                <h1>{postData.title}</h1>
+                <p>{formatDate(postData.date)}</p>
+                <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+            </main>
+        </div>
     );
 };
