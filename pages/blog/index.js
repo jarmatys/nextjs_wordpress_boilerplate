@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import useSWR from 'swr';
 import jsonFetcher from 'utils/jsonFetcher';
+import BaseLayout from 'components/BaseLayout';
 import { getAllPosts } from 'utils/api';
 
 export async function getStaticProps() {
@@ -26,20 +27,22 @@ export default function Blog({ allPosts: { edges } }) {
       </Head>
 
       <main>
-        <h1>Latest blog articles</h1>
-        <hr />
-        <section>
-          {data.map(({ node }) => (
-            <div key={node.id}>
-              <div className="padding">
-                <h2>{node.title}</h2>
-                <Link href={`/blog/${node.slug}`}>
-                  <a>Read more</a>
-                </Link>
+        <BaseLayout>
+          <h1>Latest blog articles</h1>
+          <hr />
+          <section>
+            {data.map(({ node }) => (
+              <div key={node.id}>
+                <div className="padding">
+                  <h2>{node.title}</h2>
+                  <Link href={`/blog/${node.slug}`}>
+                    <a>Read more</a>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-        </section>
+            ))}
+          </section>
+        </BaseLayout>
       </main>
     </div>
   );

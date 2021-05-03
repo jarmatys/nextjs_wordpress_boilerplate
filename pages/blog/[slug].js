@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import BaseLayout from 'components/BaseLayout';
 
 import { getAllPostsWithSlug, getPost } from 'utils/api';
 
@@ -46,11 +47,12 @@ export default function BlogPage({ postData }) {
                 <title>{postData.title} - blog internetowy</title>
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-
             <main>
-                <h1>{postData.title}</h1>
-                <p>{formatDate(postData.date)}</p>
-                <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+                <BaseLayout>
+                    <h1>{postData.title}</h1>
+                    <p>{formatDate(postData.date)}</p>
+                    <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+                </BaseLayout>
             </main>
         </div>
     );
