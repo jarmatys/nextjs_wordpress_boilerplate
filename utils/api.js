@@ -1,6 +1,8 @@
 const API_URL = process.env.WP_API_URL;
 
-export const fetchAPI = async (query, { variables } = {}) => {
+import { allPosts, allPostsWithSlug, post } from 'utils/queries/posts';
+
+const fetchAPI = async (query, { variables } = {}) => {
   const headers = { 'Content-Type': 'application/json' };
 
   const res = await fetch(API_URL, {
@@ -19,76 +21,16 @@ export const fetchAPI = async (query, { variables } = {}) => {
 };
 
 export const getAllPosts = async () => {
-  const data = await fetchAPI(
-    `
-    query AllPosts {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC}}) {
-        edges {
-          node {
-            id
-            date
-            title
-            slug
-            extraPostInfo {
-              authorExcerpt
-              thumbnailImage {
-                mediaItemUrl
-              }
-            }
-          }
-        }
-      }
-    }
-    `
-  );
+  const data = await fetchAPI(allPosts);
   return data?.posts;
 };
 
 export const getAllPostsWithSlug = async () => {
-  const data = await fetchAPI(
-    `
-    {
-      posts(first: 10000) {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `
-  );
+  const data = await fetchAPI(allPostsWithSlug);
   return data?.posts;
 };
 
 export const getPost = async (slug) => {
-  const data = await fetchAPI(
-    `
-    fragment PostFields on Post {
-      title
-      excerpt
-      slug
-      date
-      featuredImage {
-        node {
-          sourceUrl
-        }
-      }
-    }
-    query PostBySlug($id: ID!, $idType: PostIdType!) {
-      post(id: $id, idType: $idType) {
-        ...PostFields
-        content
-      }
-    }
-  `,
-    {
-      variables: {
-        id: slug,
-        idType: 'SLUG'
-      }
-    }
-  );
-
+  const data = await fetchAPI(post, { variables: { id: slug, idType: 'SLUG' } });
   return data;
 };
