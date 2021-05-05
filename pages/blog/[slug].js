@@ -1,14 +1,10 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import Link from 'next/link';
 import BaseLayout from 'components/BaseLayout';
 
-import { getAllPostsWithSlug, getPost } from 'utils/api';
+import SingleArticle from 'components/Parts/Articles/Single';
 
-const formatDate = date => {
-    const newDate = new Date(date);
-    return `${newDate.getDate()}/${newDate.getMonth() + 1}/${newDate.getFullYear()}`;
-}
+import { getAllPostsWithSlug, getPost } from 'utils/api';
 
 export async function getStaticPaths() {
     const allPost = await getAllPostsWithSlug();
@@ -49,9 +45,7 @@ export default function BlogPage({ postData }) {
             </Head>
             <main>
                 <BaseLayout>
-                    <h1>{postData.title}</h1>
-                    <p>{formatDate(postData.date)}</p>
-                    <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+                    <SingleArticle article={postData} />
                 </BaseLayout>
             </main>
         </div>
