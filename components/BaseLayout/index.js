@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import classNames from 'classnames';
+import DesktopMenu from 'components/BaseLayout/DesktopMenu';
+import MobileMenu from 'components/BaseLayout/MobileMenu';
 
 const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -8,9 +10,9 @@ const Navigation = () => {
   return (
     <section className="container mx-auto">
       <nav className="relative px-6 py-6 flex justify-between items-center bg-white">
-        <a className="text-3xl font-bold leading-none" href="/">
-          MakersMatch
-        </a>
+        <Link href="/">
+          <a className="text-3xl font-bold leading-none">Nazwa firmy</a>
+        </Link>
         <div className="lg:hidden">
           <button
             onClick={() => setNavOpen(true)}
@@ -24,18 +26,10 @@ const Navigation = () => {
             </svg>
           </button>
         </div>
-        <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-          <li>
-            <Link href="/blog">
-              <a className="text-sm text-gray-400 hover:text-gray-500" >
-                Blog
-            </a>
-            </Link>
-          </li>
-        </ul>
-        <Link href="/login">
+        <DesktopMenu />
+        <Link href="/contact" as="/kontakt">
           <a className="hidden lg:inline-block py-2 px-6 bg-green-500 hover:bg-green-600 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
-            Sign in
+            Kontakt
           </a>
         </Link>
       </nav>
@@ -44,7 +38,7 @@ const Navigation = () => {
         <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
           <div className="flex items-center mb-8">
             <a className="mr-auto text-3xl font-bold leading-none" href="/">
-              MakersMatch
+              Nazwa firmy
             </a>
             <button onClick={() => setNavOpen(false)} className="navbar-close">
               <svg
@@ -62,26 +56,15 @@ const Navigation = () => {
             </button>
           </div>
           <div>
-            <ul>
-              <li className="mb-1">
-                <Link href="/blog">
-                  <a
-                    className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded">
-                    Blog
-                </a>
-                </Link>
-              </li>
-            </ul>
+            <MobileMenu />
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <Link href="/login">
-                <a
-                  className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-green-600 hover:bg-green-700 rounded-l-xl rounded-t-xl">
-                  Sign In
+              <Link href="/contact" as="/kontakt">
+                <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-green-600 hover:bg-green-700 rounded-l-xl rounded-t-xl">
+                  Kontakt
                 </a>
               </Link>
-
             </div>
             <p className="my-4 text-xs text-center text-gray-400">
               <span>&copy; 2020 All rights reserved.</span>
@@ -96,46 +79,82 @@ const Navigation = () => {
 const Footer = () => {
   return (
     <section>
-      <div className="skew skew-top mr-for-radius">
-        <svg
-          className="h-8 md:h-12 lg:h-20 w-full text-gray-50"
-          viewbox="0 0 10 10"
-          preserveaspectratio="none">
+      <div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none">
           <polygon fill="currentColor" points="0 0 10 10 0 10"></polygon>
         </svg>
       </div>
-      <div className="skew skew-top ml-for-radius">
-        <svg
-          className="h-8 md:h-12 lg:h-20 w-full text-gray-50"
-          viewbox="0 0 10 10"
-          preserveaspectratio="none">
+      <div class="skew skew-top ml-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none">
           <polygon fill="currentColor" points="0 10 10 0 10 10"></polygon>
         </svg>
       </div>
-      <div className="py-20 radius-for-skewed">
-        <div className="max-w-md mx-auto text-center">
-          <p className="mb-6 text-sm font-semibold text-gray-400">
-            &copy; 2021. All rights reserved.
-          </p>
+      <div class="py-20 bg-gray-50 radius-for-skewed">
+        <div class="container mx-auto px-4">
+          <div class="pb-12 flex flex-wrap items-center justify-between border-b border-gray-100">
+            <div class="w-full lg:w-1/5 mb-12 lg:mb-4">
+              <Link href="/">
+                <a className="text-3xl font-bold leading-none">Nazwa firmy</a>
+              </Link>
+            </div>
+            <div class="w-full lg:w-auto">
+              <ul class="flex flex-wrap lg:space-x-5 items-center">
+                <li class="w-full md:w-auto mb-2 md:mb-0"><a class="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Start</a></li>
+                <li class="hidden md:block">
+                  <svg class="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                  </svg>
+                </li>
+                <li class="w-full md:w-auto mb-2 md:mb-0"><a class="lg:text-sm text-gray-400 hover:text-gray-500" href="#">About Us</a></li>
+                <li class="hidden md:block">
+                  <svg class="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                  </svg>
+                </li>
+                <li class="w-full md:w-auto mb-2 md:mb-0"><a class="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
+                <li class="hidden md:block">
+                  <svg class="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                  </svg>
+                </li>
+                <li class="w-full md:w-auto mb-2 md:mb-0"><a class="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Platform</a></li>
+                <li class="hidden md:block">
+                  <svg class="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                  </svg>
+                </li>
+                <li><a class="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex flex-wrap justify-between items-center">
+            <p class="order-last text-sm text-gray-400">&copy; 2021. All rights reserved.</p>
+            <div class="mb-4 lg:mb-0 order-first lg:order-last">
+              <a class="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
+                <img src="/facebook.svg" />
+              </a>
+              <a class="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
+                <img src="/twitter.svg" />
+              </a>
+              <a class="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
+                <img src="/instagram.svg" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="skew skew-bottom mr-for-radius">
-        <svg
-          className="h-8 md:h-12 lg:h-20 w-full text-gray-50"
-          viewbox="0 0 10 10"
-          preserveaspectratio="none">
+      <div class="skew skew-bottom mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none">
           <polygon fill="currentColor" points="0 0 10 0 0 10"></polygon>
         </svg>
       </div>
-      <div className="skew skew-bottom ml-for-radius">
-        <svg
-          className="h-8 md:h-12 lg:h-20 w-full text-gray-50"
-          viewbox="0 0 10 10"
-          preserveaspectratio="none">
+      <div class="skew skew-bottom ml-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none">
           <polygon fill="currentColor" points="0 0 10 0 10 10"></polygon>
         </svg>
       </div>
     </section>
+
   );
 };
 
