@@ -1,4 +1,5 @@
 import { formatDate } from 'utils/date';
+import { addTailwindClassToRawHtml } from 'utils/gutenberg';
 
 export default function ({ article }) {
     return (
@@ -11,7 +12,7 @@ export default function ({ article }) {
                         <h3 class="mb-4 text-2xl font-bold font-heading">{formatDate(article.date)}</h3>
                     </div>
                     <div>
-                        <div dangerouslySetInnerHTML={{ __html: article.content }} />
+                        <div dangerouslySetInnerHTML={{ __html: addTailwindClassToRawHtml(article.content) }} />
                     </div>
                 </div>
             </div>
