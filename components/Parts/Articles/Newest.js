@@ -17,7 +17,7 @@ export default function () {
                 <div class="container mx-auto px-4">
                     <div class="mb-6 flex flex-wrap justify-center">
                         <div class="mb-16 w-full text-center">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
+                            <span class="text-blue-600 font-bold">Dolor sit amet consectutar</span>
                             <h2 class="text-4xl lg:text-5xl font-bold font-heading">Our Blog</h2>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-16">
@@ -28,7 +28,7 @@ export default function () {
                                         <span class="text-sm text-gray-400">24 Jan, 2021</span>
                                         <h2 class="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
                                         <p class="mb-6 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
-                                        <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
+                                        <a class="text-blue-600 hover:text-blue-700 font-bold" href="#">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@ export default function () {
                                         <div class="p-6 rounded-b bg-white">
                                             <span class="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 class="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
-                                            <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
+                                            <a class="text-blue-600 hover:text-blue-700 font-bold" href="#">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@ export default function () {
                                         <div class="p-6 rounded-b bg-white">
                                             <span class="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 class="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
-                                            <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
+                                            <a class="text-blue-600 hover:text-blue-700 font-bold" href="#">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ export default function () {
                                         <div class="p-6 rounded-b bg-white">
                                             <span class="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 class="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
-                                            <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
+                                            <a class="text-blue-600 hover:text-blue-700 font-bold" href="#">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -69,13 +69,13 @@ export default function () {
                                         <div class="p-6 rounded-b bg-white">
                                             <span class="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 class="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
-                                            <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
+                                            <a class="text-blue-600 hover:text-blue-700 font-bold" href="#">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div><a class="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose outline-none transition duration-200" href="#">View More Articles</a></div>
+                        <div><a class="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold leading-loose outline-none transition duration-200" href="#">View More Articles</a></div>
                     </div>
                 </div>
             </div>

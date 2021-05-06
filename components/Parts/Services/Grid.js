@@ -17,10 +17,10 @@ export default function () {
                 <div class="container mx-auto px-4">
                     <div class="mb-16 flex flex-wrap justify-center md:justify-between items-center">
                         <div class="text-center lg:text-left">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
+                            <span class="text-blue-600 font-bold">Dolor sit amet consectutar</span>
                             <h2 class="text-4xl lg:text-5xl font-bold font-heading">Featured Projects</h2>
                         </div>
-                        <a class="hidden md:inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200" href="#">View More Projects</a>
+                        <a class="hidden md:inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold leading-loose transition duration-200" href="#">View More Projects</a>
                     </div>
                     <div class="flex flex-wrap -mx-4 mb-4">
                         <div class="mb-8 w-full md:w-1/2 lg:w-1/3 px-4">
@@ -29,7 +29,7 @@ export default function () {
                                 <div class="p-6">
                                     <span class="text-gray-400">2021</span>
                                     <h3 class="mb-4 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet consectutar</h3>
-                                    <a class="flex text-green-600 hover:text-green-700 font-bold" href="#">
+                                    <a class="flex text-blue-600 hover:text-blue-700 font-bold" href="#">
                                         <svg class="mr-3 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
                                         </svg>
@@ -44,7 +44,7 @@ export default function () {
                                 <div class="p-6">
                                     <span class="text-gray-400">2021</span>
                                     <h3 class="mb-4 text-2xl font-bold font-heading">Curabitur imperdiet feugiat cursus</h3>
-                                    <a class="flex text-green-600 hover:text-green-700 font-bold" href="#">
+                                    <a class="flex text-blue-600 hover:text-blue-700 font-bold" href="#">
                                         <svg class="mr-3 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
                                         </svg>
@@ -59,7 +59,7 @@ export default function () {
                                 <div class="p-6">
                                     <span class="text-gray-400">2021</span>
                                     <h3 class="mb-4 text-2xl font-bold font-heading">Nullam imperdiet lorem at accumsan interdum</h3>
-                                    <a class="flex text-green-600 hover:text-green-700 font-bold" href="#">
+                                    <a class="flex text-blue-600 hover:text-blue-700 font-bold" href="#">
                                         <svg class="mr-3 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
                                         </svg>
@@ -74,7 +74,7 @@ export default function () {
                                 <div class="p-6">
                                     <span class="text-gray-400">2021</span>
                                     <h3 class="mb-4 text-2xl font-bold font-heading">Lorem ipsum dolor sit amet consectutar</h3>
-                                    <a class="flex text-green-600 hover:text-green-700 font-bold" href="#">
+                                    <a class="flex text-blue-600 hover:text-blue-700 font-bold" href="#">
                                         <svg class="mr-3 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
                                         </svg>
@@ -89,7 +89,7 @@ export default function () {
                                 <div class="p-6">
                                     <span class="text-gray-400">2021</span>
                                     <h3 class="mb-4 text-2xl font-bold font-heading">Curabitur imperdiet feugiat cursus</h3>
-                                    <a class="flex text-green-600 hover:text-green-700 font-bold" href="#">
+                                    <a class="flex text-blue-600 hover:text-blue-700 font-bold" href="#">
                                         <svg class="mr-3 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
                                         </svg>
@@ -104,7 +104,7 @@ export default function () {
                                 <div class="p-6">
                                     <span class="text-gray-400">2021</span>
                                     <h3 class="mb-4 text-2xl font-bold font-heading">Nullam imperdiet lorem at accumsan interdum</h3>
-                                    <a class="flex text-green-600 hover:text-green-700 font-bold" href="#">
+                                    <a class="flex text-blue-600 hover:text-blue-700 font-bold" href="#">
                                         <svg class="mr-3 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"></path>
                                         </svg>
@@ -114,7 +114,7 @@ export default function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center"><a class="md:hidden inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200" href="#">View More Projects</a></div>
+                    <div class="text-center"><a class="md:hidden inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold leading-loose transition duration-200" href="#">View More Projects</a></div>
                 </div>
             </div>
             <div class="skew skew-bottom mr-for-radius">

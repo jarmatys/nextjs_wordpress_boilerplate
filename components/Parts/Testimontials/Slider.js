@@ -15,16 +15,16 @@ export default function () {
                 <div class="max-w-6xl mx-auto px-4 pb-6 lg:pb-16">
                     <div class="flex flex-wrap justify-center lg:justify-between items-center text-center lg:text-left">
                         <div class="w-full lg:w-4/5 mb-4 lg:mb-0">
-                            <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
+                            <span class="text-blue-600 font-bold">Dolor sit amet consectutar</span>
                             <h2 class="text-4xl lg:text-5xl font-bold font-heading">Testimonials</h2>
                         </div>
                         <div class="w-full lg:w-1/5">
-                            <button class="mr-4 bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-700 transition duration-200">
+                            <button class="mr-4 bg-white p-5 rounded-full shadow-md text-blue-600 hover:text-blue-700 transition duration-200">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                 </svg>
                             </button>
-                            <button class="bg-white p-5 rounded-full shadow-md text-green-600 hover:text-green-700 transition duration-200">
+                            <button class="bg-white p-5 rounded-full shadow-md text-blue-600 hover:text-blue-700 transition duration-200">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>

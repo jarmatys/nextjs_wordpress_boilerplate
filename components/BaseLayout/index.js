@@ -16,7 +16,7 @@ const Navigation = () => {
         <div className="lg:hidden">
           <button
             onClick={() => setNavOpen(true)}
-            className="navbar-burger flex items-center text-green-600 p-3">
+            className="navbar-burger flex items-center text-blue-600 p-3">
             <svg
               className="block h-4 w-4 fill-current"
               viewbox="0 0 20 20"
@@ -28,7 +28,7 @@ const Navigation = () => {
         </div>
         <DesktopMenu />
         <Link href="/contact" as="/kontakt">
-          <a className="hidden lg:inline-block py-2 px-6 bg-green-500 hover:bg-green-600 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
+          <a className="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
             Kontakt
           </a>
         </Link>
@@ -61,7 +61,7 @@ const Navigation = () => {
           <div className="mt-auto">
             <div className="pt-6">
               <Link href="/contact" as="/kontakt">
-                <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-green-600 hover:bg-green-700 rounded-l-xl rounded-t-xl">
+                <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-l-xl rounded-t-xl">
                   Kontakt
                 </a>
               </Link>
@@ -154,7 +154,6 @@ const Footer = () => {
         </svg>
       </div>
     </section>
-
   );
 };
 
@@ -162,7 +161,7 @@ export default function Home({ children }) {
   return (
     <div className="">
       <Navigation />
-      <div className="container mx-auto">{children}</div>
+      <div>{children}</div>
       <Footer />
     </div>
   );

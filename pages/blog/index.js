@@ -5,7 +5,7 @@ import BaseLayout from 'components/BaseLayout';
 import { getAllPosts } from 'utils/api';
 
 import ListItem from 'components/Parts/Articles/ListItem';
-import BlogHeader from 'components/Parts/Headers/Blog';
+import BlogHeader from 'components/Parts/Breadcrumbs/Blog';
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();

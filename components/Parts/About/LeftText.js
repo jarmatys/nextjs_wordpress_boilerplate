@@ -16,12 +16,12 @@ export default function () {
                     <div class="flex flex-wrap items-center -mx-4">
                         <div class="mb-12 lg:mb-0 w-full lg:w-1/2 px-4">
                             <div class="max-w-md">
-                                <span class="text-green-600 font-bold">Dolor sit amet consectutar</span>
+                                <span class="text-blue-600 font-bold">Dolor sit amet consectutar</span>
                                 <h2 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">Build &amp; Launch without problems</h2>
                                 <ul>
                                     <li class="flex mb-4">
                                         <div>
-                                            <svg class="mr-3 w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                            <svg class="mr-3 w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                                             </svg>
                                         </div>
@@ -32,7 +32,7 @@ export default function () {
                                     </li>
                                     <li class="flex mb-4">
                                         <div>
-                                            <svg class="mr-3 w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                            <svg class="mr-3 w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                                             </svg>
                                         </div>
@@ -43,7 +43,7 @@ export default function () {
                                     </li>
                                     <li class="flex">
                                         <div>
-                                            <svg class="mr-3 w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                            <svg class="mr-3 w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                                             </svg>
                                         </div>

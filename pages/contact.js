@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Login() {
   return (
     <div>
-      <section className="h-screen py-10 lg:py-20 bg-green-600">
+      <section className="h-screen py-10 lg:py-20 bg-blue-600">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto">
             <div className="mb-10 text-center ">
