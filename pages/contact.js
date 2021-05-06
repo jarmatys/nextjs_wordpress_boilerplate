@@ -1,37 +1,10 @@
-import Link from 'next/link';
+  import BaseLayout from 'components/BaseLayout';
+import ContactForm from 'components/Parts/Contacts/Form';
 
-export default function Login() {
+export default function Contact() {
   return (
-    <div>
-      <section className="h-screen py-10 lg:py-20 bg-blue-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-xl mx-auto">
-            <div className="mb-10 text-center ">
-              <Link href="/">
-                <a className="text-white text-3xl font-bold leading-none">MakersMatch</a>
-              </Link>
-            </div>
-            <div className="p-6 lg:p-12 bg-white shadow-md rounded">
-              <div className="mb-6 px-3 text-center">
-                <span className="text-gray-500">Sign In</span>
-                <h3 className="text-2xl font-bold">Join our community</h3>
-              </div>
-              <form action="">
-                <div className="text-center">
-                  <a
-                    className="mt-8 mb-4 p-4 flex justify-center items-center border rounded hover:bg-gray-50"
-                    href="/">
-                    <img className="mr-4 w-6" src="/github.svg" alt="" />
-                    <span className="text-xs text-gray-500 font-bold">
-                      Sign In with your GitHub
-                    </span>
-                  </a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <BaseLayout>
+      <ContactForm />
+    </BaseLayout>
   );
 }
