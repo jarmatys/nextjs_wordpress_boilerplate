@@ -1,15 +1,16 @@
 export const allPosts = `
     query AllPosts {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC}}) {
+      posts(first: 20, where: {orderby: {field: DATE, order: DESC}}) {
         edges {
           node {
             id
             date
             title
             slug
-            extraPostInfo {
-              authorExcerpt
-              thumbnailImage {
+            excerpt
+            featuredImage {
+              node {
+                altText
                 mediaItemUrl
               }
             }
