@@ -4,7 +4,7 @@ import jsonFetcher from 'utils/jsonFetcher';
 import BaseLayout from 'components/BaseLayout';
 import { getAllPosts } from 'utils/api';
 
-import ListItem from 'components/Parts/Articles/ListItem';
+import ItemList from 'components/Parts/Articles/ItemList';
 import BlogHeader from 'components/Parts/Breadcrumbs/Blog';
 
 export async function getStaticProps() {
@@ -34,7 +34,7 @@ export default function Blog({ allPosts: { edges } }) {
           <BlogHeader />
           <section className="container mx-auto">
             {data.map(({ node }) => (
-              <ListItem key={node.id} article={node} />
+              <ItemList key={node.id} article={node} />
             ))}
           </section>
         </BaseLayout>

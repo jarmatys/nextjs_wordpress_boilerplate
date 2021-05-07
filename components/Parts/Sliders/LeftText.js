@@ -27,7 +27,7 @@ export default function LeftText() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 px-4">
+                    <div className="w-full lg:w-1/2 lg:block hidden px-4">
                         <div className="lg:absolute top-0 my-12 lg:my-0 h-full w-full lg:w-1/2 rounded-3xl lg:rounded-none object-cover">
                             <Image src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" layout="fill" objectFit="cover" />
                         </div>

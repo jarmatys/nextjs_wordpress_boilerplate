@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from 'utils/date';
 
-export default function ListItem({ article }) {
+export default function ItemList({ article }) {
     return (
         <section>
             <div className="mb-8 flex flex-wrap rounded-lg shadow overflow-hidden">
@@ -17,7 +17,9 @@ export default function ListItem({ article }) {
                     </Link>
                 </div>
                 <div className="w-full lg:w-1/2 rounded-l order-0 lg:order-1">
-                    <Image className="object-cover" src={article.featuredImage?.node?.mediaItemUrl} alt={article.featuredImage?.node?.altText} height={1280} width={1920}  />
+                    <div className="object-cover h-full relative">
+                        <Image src={article.featuredImage?.node?.mediaItemUrl} alt={article.featuredImage?.node?.altText} layout="fill" objectFit="cover" />
+                    </div>
                 </div>
             </div>
         </section>

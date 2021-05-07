@@ -9,31 +9,33 @@ const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
   return (
-    <section className="container mx-auto">
-      <nav className="relative px-6 py-6 flex justify-between items-center bg-white">
-        <Link href="/">
-          <a className="text-3xl font-bold leading-none">Nazwa firmy</a>
-        </Link>
-        <div className="lg:hidden">
-          <button
-            onClick={() => setNavOpen(true)}
-            className="navbar-burger flex items-center text-blue-600 p-3">
-            <svg
-              className="block h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-          </button>
-        </div>
-        <DesktopMenu />
-        <Link href="/contact" as="/kontakt">
-          <a className="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
-            Kontakt
+    <section className="sticky top-0 z-50 border-b-2 border-gray-200 bg-white">
+      <section class="container mx-auto">
+        <nav className="px-6 py-6 flex justify-between items-center ">
+          <Link href="/">
+            <a className="text-3xl font-bold leading-none">Nazwa firmy</a>
+          </Link>
+          <div className="lg:hidden">
+            <button
+              onClick={() => setNavOpen(true)}
+              className="navbar-burger flex items-center text-blue-600 p-3">
+              <svg
+                className="block h-4 w-4 fill-current"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Mobile menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+              </svg>
+            </button>
+          </div>
+          <DesktopMenu />
+          <Link href="/contact" as="/kontakt">
+            <a className="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
+              Kontakt
           </a>
-        </Link>
-      </nav>
+          </Link>
+        </nav>
+      </section>
       <div className={classNames(['navbar-menu', 'relative', 'z-50'], { hidden: !isNavOpen })}>
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">

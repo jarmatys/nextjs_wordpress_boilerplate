@@ -7,16 +7,29 @@ import SimpleCompanies from 'components/Parts/Companies/Simple';
 import HorizontalCounters from 'components/Parts/Counters/Horizontal';
 import NewestArticles from 'components/Parts/Articles/Newest';
 
-export default function Home() {
+import { getAllPosts } from 'utils/api';
+
+export async function getStaticProps() {
+  const { edges } = await getAllPosts();
+
+  return {
+    props: {
+      edges
+    },
+    revalidate: 3600
+  };
+};
+
+export default function Home({ edges }) {
   return (
     <BaseLayout>
-      <LeftTextSlider />
-      <LeftTextAbout />
-      <HorizontalCounters />
+     <LeftTextSlider />
+       <LeftTextAbout />
+       <HorizontalCounters />
       <GridService />
       <SimpleCompanies />
       <SliderTestimontial />
-      <NewestArticles />
+      <NewestArticles articles={edges} /> 
     </BaseLayout>
   );
 }
