@@ -32,7 +32,7 @@ export default function Blog({ allPosts: { edges } }) {
       <main>
         <BaseLayout>
           <BlogHeader />
-          <section>
+          <section className="container mx-auto">
             {data.map(({ node }) => (
               <ListItem key={node.id} article={node} />
             ))}

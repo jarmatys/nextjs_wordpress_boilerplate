@@ -44,35 +44,35 @@ export default function Form() {
     };
 
     return (
-        <section class="relative py-10 lg:h-screen container mx-auto">
-            <div class="hidden lg:flex items-center absolute inset-0 w-2/5 bg-white">
-                <img class="mx-auto" src="/technical-support-dark-green.png" alt="" />
+        <section className="relative py-10 lg:h-screen container mx-auto">
+            <div className="hidden lg:flex items-center absolute inset-0 w-2/5 bg-white">
+                <img className="mx-auto" src="/technical-support-dark-green.png" alt="" />
             </div>
-            <div class="lg:absolute inset-0 flex justify-center items-center ml-auto w-full lg:w-3/5">
-                <div class="px-4">
-                    <div class="max-w-md mx-auto p-10 bg-gray-100">
-                        <h3 class="mb-6 text-2xl">Got any question? Let's talk about it.</h3>
+            <div className="lg:absolute inset-0 flex justify-center items-center ml-auto w-full lg:w-3/5">
+                <div className="px-4">
+                    <div className="max-w-md mx-auto p-10 bg-gray-100">
+                        <h3 className="mb-6 text-2xl">Got any question? Let's talk about it.</h3>
                         <form ref={contactForm}>
-                            <div class="mb-4">
-                                <input class="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Subject" name="subject" />
+                            <div className="mb-4">
+                                <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Subject" name="subject" />
                             </div>
-                            <div class="mb-4">
-                                <input class="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Name" name="name" />
+                            <div className="mb-4">
+                                <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Name" name="name" />
                             </div>
-                            <div class="mb-4">
-                                <input class="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="email" placeholder="name@example.com" name="email" />
+                            <div className="mb-4">
+                                <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="email" placeholder="name@example.com" name="email" />
                             </div>
-                            <div class="mb-4">
-                                <textarea class="w-full h-24 p-4 font-semibold leading-none resize-none bg-white rounded outline-none" type="text" placeholder="Message..." name="message" />
+                            <div className="mb-4">
+                                <textarea className="w-full h-24 p-4 font-semibold leading-none resize-none bg-white rounded outline-none" type="text" placeholder="Message..." name="message" />
                             </div>
-                            <div class="mb-4">
+                            <div className="mb-4">
                                 <label>
-                                    <input class="mr-1" type="checkbox" name="terms" name="terms" />
-                                    <span class="text-sm font-semibold">I agree to terms and conditions.</span>
+                                    <input className="mr-1" type="checkbox" name="terms" name="terms" />
+                                    <span className="text-sm font-semibold">I agree to terms and conditions.</span>
                                 </label>
                             </div>
-                            <div class="flex justify-end mt-3">
-                                <button disabled={formProcessing} onClick={onClickHandler} class="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200">
+                            <div className="flex justify-end mt-3">
+                                <button disabled={formProcessing} onClick={onClickHandler} className="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200">
                                     {formProcessing ? 'Please wait...' : 'Send message'}
                                 </button>
                             </div>
