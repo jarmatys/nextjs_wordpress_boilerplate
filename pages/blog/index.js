@@ -2,6 +2,7 @@ import Head from 'next/head';
 import useSWR from 'swr';
 import jsonFetcher from 'utils/jsonFetcher';
 import BaseLayout from 'components/BaseLayout';
+import MetaTags from 'components/MetaTags';
 import { getAllPosts } from 'utils/api';
 
 import ItemList from 'components/Parts/Articles/ItemList';
@@ -24,10 +25,7 @@ export default function Blog({ allPosts: { edges } }) {
 
   return (
     <div>
-      <Head>
-        <title>Blog articles page</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <MetaTags title="List of articles" />
 
       <main>
         <BaseLayout>

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import BaseLayout from 'components/BaseLayout';
-
+import MetaTags from 'components/MetaTags';
 import SingleArticle from 'components/Parts/Articles/Single';
 
 import { getAllPostsWithSlug, getPost } from 'utils/api';
@@ -39,10 +39,8 @@ export default function BlogPage({ postData }) {
 
     return (
         <div>
-            <Head>
-                <title>{postData.title} - blog internetowy</title>
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
+            <MetaTags title={postData.title} />
+
             <main>
                 <BaseLayout>
                     <SingleArticle article={postData} />

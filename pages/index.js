@@ -1,4 +1,7 @@
+import Head from 'next/head';
+
 import BaseLayout from 'components/BaseLayout';
+import MetaTags from 'components/MetaTags';
 import LeftTextSlider from 'components/Parts/Sliders/LeftText';
 import GridService from 'components/Parts/Services/Grid';
 import SliderTestimontial from 'components/Parts/Testimontials/Slider';
@@ -22,14 +25,21 @@ export async function getStaticProps() {
 
 export default function Home({ edges }) {
   return (
-    <BaseLayout>
-     <LeftTextSlider />
-       <LeftTextAbout />
-       <HorizontalCounters />
-      <GridService />
-      <SimpleCompanies />
-      <SliderTestimontial />
-      <NewestArticles articles={edges} /> 
-    </BaseLayout>
+    <div>
+      <MetaTags title="Home page" />
+
+      <main>
+        <BaseLayout>
+          <LeftTextSlider />
+          <LeftTextAbout />
+          <HorizontalCounters />
+          <GridService />
+          <SimpleCompanies />
+          <SliderTestimontial />
+          <NewestArticles articles={edges} />
+        </BaseLayout>
+      </main>
+    </div>
+
   );
 }
