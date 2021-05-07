@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
+import Joi from 'joi';
 
-export default function Form() {
+export default function Form() { 
     const contactForm = useRef();
 
     const [formProcessing, setFormProcessing] = useState(false);
@@ -55,7 +56,7 @@ export default function Form() {
                         <h3 className="mb-6 text-2xl">Got any question? Let's talk about it.</h3>
                         <form ref={contactForm}>
                             <div className="mb-4">
-                                <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Subject" name="subject" />
+                                <input className="border border-red-700 w-full p-6  font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Subject" name="subject" />
                             </div>
                             <div className="mb-4">
                                 <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Name" name="name" />
@@ -73,7 +74,7 @@ export default function Form() {
                                 </label>
                             </div>
                             <div className="flex justify-end mt-3">
-                                <button disabled={formProcessing} onClick={onClickHandler} className="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200">
+                                <button disabled={formProcessing} onClick={onClickHandler} className="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold leading-loose transition duration-200">
                                     {formProcessing ? 'Please wait...' : 'Send message'}
                                 </button>
                             </div>
@@ -81,11 +82,10 @@ export default function Form() {
 
                         {errors && (
                             <div className="flex justify-center w-full my-5">
-                                <span className="bg-red-600 w-full rounded text-white px-3 py-3 text-center">
-                                    Email not sent:
-                                    <ul>
+                                <span className="bg-red-600 w-full rounded text-white px-3 py-3">
+                                    <ul className="list-disc mt-3 mb-3 ml-10">
                                         {errors.map((error) => {
-                                            return <li>{error.message}</li>
+                                            return <li key={error.message}>{error.message}</li>
                                         })}
                                     </ul>
                                 </span>
