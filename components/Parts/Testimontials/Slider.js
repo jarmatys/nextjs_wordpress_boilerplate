@@ -1,17 +1,7 @@
 export default function Slider() {
     return (
-        <section>
-            <div className="skew skew-top mr-for-radius">
-                <svg className="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
-                    <polygon fill="currentColor" points="0 0 10 10 0 10"></polygon>
-                </svg>
-            </div>
-            <div className="skew skew-top ml-for-radius">
-                <svg className="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
-                    <polygon fill="currentColor" points="0 10 10 0 10 10"></polygon>
-                </svg>
-            </div>
-            <div className="py-20 bg-gray-50 radius-for-skewed overflow-hidden">
+        <section>     
+            <div className="py-20 bg-gray-100 radius-for-skewed overflow-hidden">
                 <div className="max-w-6xl mx-auto px-4 pb-6 lg:pb-16">
                     <div className="flex flex-wrap justify-center lg:justify-between items-center text-center lg:text-left">
                         <div className="w-full lg:w-4/5 mb-4 lg:mb-0">
@@ -37,7 +27,6 @@ export default function Slider() {
                         <div className="p-8 bg-white rounded shadow text-center">
                             <div>
                                 <p className="mb-8 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
-                                <img className="mb-2 mx-auto w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" />
                                 <h4 className="mb-1 text-2xl font-bold font-heading">Alice Bradley</h4>
                                 <p className="text-gray-500">Backend Developer</p>
                             </div>
@@ -48,7 +37,6 @@ export default function Slider() {
                             <div className="p-8 bg-white rounded shadow text-center">
                                 <div>
                                     <p className="mb-8 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
-                                    <img className="mb-2 mx-auto w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" />
                                     <h4 className="mb-1 text-2xl font-bold font-heading">Alice Bradley</h4>
                                     <p className="text-gray-500">Backend Developer</p>
                                 </div>
@@ -58,7 +46,6 @@ export default function Slider() {
                             <div className="p-8 bg-white rounded shadow text-center">
                                 <div>
                                     <p className="mb-8 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
-                                    <img className="mb-2 mx-auto w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80" alt="" />
                                     <h4 className="mb-1 text-2xl font-bold font-heading">Dennis Robertson</h4>
                                     <p className="text-gray-500">Frontend Developer</p>
                                 </div>
@@ -68,7 +55,6 @@ export default function Slider() {
                             <div className="p-8 bg-white rounded shadow text-center">
                                 <div>
                                     <p className="mb-8 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
-                                    <img className="mb-2 mx-auto w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" />
                                     <h4 className="mb-1 text-2xl font-bold font-heading">Daisy Carter</h4>
                                     <p className="text-gray-500">Product Developer</p>
                                 </div>
@@ -79,7 +65,6 @@ export default function Slider() {
                         <div className="p-8 bg-white rounded shadow text-center">
                             <div>
                                 <p className="mb-8 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et placerat metus. Morbi aliquet felis sit amet erat finibus, ac condimentum ligula ornare.</p>
-                                <img className="mb-2 mx-auto w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1484588168347-9d835bb09939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" />
                                 <h4 className="mb-1 text-2xl font-bold font-heading">Alice Bradley</h4>
                                 <p className="text-gray-500">Backend Developer</p>
                             </div>
@@ -87,17 +72,6 @@ export default function Slider() {
                     </div>
                 </div>
             </div>
-            <div className="skew skew-bottom mr-for-radius">
-                <svg className="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
-                    <polygon fill="currentColor" points="0 0 10 0 0 10"></polygon>
-                </svg>
-            </div>
-            <div className="skew skew-bottom ml-for-radius">
-                <svg className="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
-                    <polygon fill="currentColor" points="0 0 10 0 10 10"></polygon>
-                </svg>
-            </div>
         </section>
-
     )
 }

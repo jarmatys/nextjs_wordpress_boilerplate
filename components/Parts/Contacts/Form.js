@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function Form() {
     const contactForm = useRef();
@@ -46,7 +47,7 @@ export default function Form() {
     return (
         <section className="relative py-10 lg:h-screen container mx-auto">
             <div className="hidden lg:flex items-center absolute inset-0 w-2/5 bg-white">
-                <img className="mx-auto" src="/technical-support-dark-green.png" alt="" />
+                <Image className="mx-auto" src="/technical-support-dark-green.png" alt="" height={342} width={465} />
             </div>
             <div className="lg:absolute inset-0 flex justify-center items-center ml-auto w-full lg:w-3/5">
                 <div className="px-4">
