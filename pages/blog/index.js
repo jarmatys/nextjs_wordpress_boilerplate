@@ -5,7 +5,7 @@ import BaseLayout from 'components/BaseLayout';
 import { getAllPosts } from 'utils/api';
 
 import ItemList from 'components/Parts/Articles/ItemList';
-import BlogHeader from 'components/Parts/Breadcrumbs/Blog';
+import SimpleHeader from 'components/Parts/Breadcrumbs/Simple';
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();
@@ -31,7 +31,7 @@ export default function Blog({ allPosts: { edges } }) {
 
       <main>
         <BaseLayout>
-          <BlogHeader />
+          <SimpleHeader h2Text="List of articles" spanText="Read my articles about IT industry" />
           <section className="container mx-auto">
             {data.map(({ node }) => (
               <ItemList key={node.id} article={node} />
