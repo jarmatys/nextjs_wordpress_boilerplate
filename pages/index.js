@@ -10,10 +10,13 @@ import SimpleCompanies from 'components/Parts/Companies/Simple';
 import HorizontalCounters from 'components/Parts/Counters/Horizontal';
 import NewestArticles from 'components/Parts/Articles/Newest';
 
-import { getAllPosts } from 'utils/api';
+import useSWR from 'swr';
+import jsonFetcher from 'utils/jsonFetcher';
+
+import { getAllMainData } from 'utils/api';
 
 export async function getStaticProps() {
-  const { edges } = await getAllPosts();
+  const { edges } = await getAllMainData();
 
   return {
     props: {
@@ -24,6 +27,9 @@ export async function getStaticProps() {
 };
 
 export default function Home({ edges }) {
+
+  const { data } = useSWR('/api/main', jsonFetcher, { initialData: edges });
+
   return (
     <div>
       <MetaTags title="Home page" />
@@ -36,7 +42,7 @@ export default function Home({ edges }) {
           <GridService />
           <SimpleCompanies />
           <SliderTestimontial />
-          <NewestArticles articles={edges} />
+          <NewestArticles articles={data} />
         </BaseLayout>
       </main>
     </div>

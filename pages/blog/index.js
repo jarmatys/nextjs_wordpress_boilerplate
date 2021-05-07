@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import useSWR from 'swr';
 import jsonFetcher from 'utils/jsonFetcher';
 import BaseLayout from 'components/BaseLayout';

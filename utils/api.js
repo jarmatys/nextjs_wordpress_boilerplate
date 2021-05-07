@@ -1,6 +1,7 @@
 const API_URL = process.env.WP_API_URL;
 
 import { allPosts, allPostsWithSlug, post } from 'utils/queries/posts';
+import { allMain } from 'utils/queries/main';
 
 const fetchAPI = async (query, { variables } = {}) => {
   const headers = { 'Content-Type': 'application/json' };
@@ -34,3 +35,9 @@ export const getPost = async (slug) => {
   const data = await fetchAPI(post, { variables: { id: slug, idType: 'SLUG' } });
   return data;
 };
+
+export const getAllMainData = async () => {
+  const data = await fetchAPI(allMain);
+  return data?.posts;
+};
+
