@@ -4,7 +4,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
         <body className="antialiased bg-body text-body font-body">
           <Main />
           <NextScript />

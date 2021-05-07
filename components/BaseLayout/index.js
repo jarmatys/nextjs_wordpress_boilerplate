@@ -10,7 +10,7 @@ const Navigation = () => {
 
   return (
     <section className="sticky top-0 z-50 border-b-2 border-gray-200 bg-white">
-      <section class="container mx-auto">
+      <section className="container mx-auto">
         <nav className="px-6 py-6 flex justify-between items-center ">
           <Link href="/">
             <a className="text-3xl font-bold leading-none">Nazwa firmy</a>
