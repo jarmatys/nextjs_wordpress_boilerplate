@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import classNames from 'classnames';
 import DesktopMenu from 'components/BaseLayout/DesktopMenu';
@@ -131,13 +132,13 @@ const Footer = () => {
             <p className="order-last text-sm text-gray-400">&copy; 2021. All rights reserved.</p>
             <div className="mb-4 lg:mb-0 order-first lg:order-last">
               <a className="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
-                <img src="/facebook.svg" />
+                <Image src="/facebook.svg" height={22} width={22} />
               </a>
               <a className="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
-                <img src="/twitter.svg" />
+                <Image src="/twitter.svg" height={22} width={22} />
               </a>
               <a className="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
-                <img src="/instagram.svg" />
+                <Image src="/instagram.svg" height={22} width={22} />
               </a>
             </div>
           </div>

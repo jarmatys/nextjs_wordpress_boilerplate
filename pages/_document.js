@@ -5,7 +5,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
         <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
           rel="stylesheet"></link>
         <body className="antialiased bg-body text-body font-body">
           <Main />

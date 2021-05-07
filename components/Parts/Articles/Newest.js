@@ -23,7 +23,7 @@ export default function Newest() {
                         <div className="flex flex-wrap -mx-3 mb-16">
                             <div className="mb-6 lg:mb-0 w-full lg:w-1/2 px-3">
                                 <div className="h-full flex flex-col rounded shadow">
-                                    <img className="rounded-t object-cover h-80 lg:h-full w-full" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=968&amp;q=80" alt="" />
+                                    <img className="rounded-t object-cover h-80 lg:h-full w-full" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=968&q=80" alt="" />
                                     <div className="mt-auto p-6 rounded-b bg-white">
                                         <span className="text-sm text-gray-400">24 Jan, 2021</span>
                                         <h2 className="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
@@ -35,7 +35,7 @@ export default function Newest() {
                             <div className="flex flex-wrap w-full lg:w-1/2">
                                 <div className="mb-6 w-full lg:w-1/2 px-3">
                                     <div className="rounded overflow-hidden shadow">
-                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1413752362258-7af2a667b590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1055&amp;q=80" alt="" />
+                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1413752362258-7af2a667b590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80" alt="" />
                                         <div className="p-6 rounded-b bg-white">
                                             <span className="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 className="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
@@ -45,7 +45,7 @@ export default function Newest() {
                                 </div>
                                 <div className="mb-6 w-full lg:w-1/2 px-3">
                                     <div className="rounded overflow-hidden shadow">
-                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1055&amp;q=80" alt="" />
+                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1055&q=80" alt="" />
                                         <div className="p-6 rounded-b bg-white">
                                             <span className="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 className="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
@@ -55,7 +55,7 @@ export default function Newest() {
                                 </div>
                                 <div className="mb-6 w-full lg:w-1/2 px-3">
                                     <div className="rounded overflow-hidden shadow">
-                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1055&amp;q=80" alt="" />
+                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1055&q=80" alt="" />
                                         <div className="p-6 rounded-b bg-white">
                                             <span className="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 className="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
@@ -65,7 +65,7 @@ export default function Newest() {
                                 </div>
                                 <div className="mb-6 w-full lg:w-1/2 px-3">
                                     <div className="rounded overflow-hidden shadow">
-                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1413752362258-7af2a667b590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1055&amp;q=80" alt="" />
+                                        <img className="lg:h-48 rounded-t" src="https://images.unsplash.com/photo-1413752362258-7af2a667b590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80" alt="" />
                                         <div className="p-6 rounded-b bg-white">
                                             <span className="text-sm text-gray-400">24 Jan, 2021</span>
                                             <h2 className="my-2 text-2xl font-bold">Morbi scelerisque nulla et lectus</h2>
