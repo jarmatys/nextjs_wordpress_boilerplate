@@ -1,5 +1,5 @@
 export const allMain = `
-    query AllPosts {
+    query AllMain {
       posts(first: 4, where: {orderby: {field: DATE, order: DESC}}) {
         edges {
           node {
@@ -17,5 +17,21 @@ export const allMain = `
           }
         }
       }
+      services(first: 6,  where: {orderby: {field: DATE, order: DESC}}) {
+        edges {
+          node {
+            id
+            slug
+            date
+            title
+            featuredImage {
+              node {
+                altText
+                mediaItemUrl
+              }
+            }
+          }
+        }
+      }
     }
-    `;
+  `;

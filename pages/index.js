@@ -16,19 +16,19 @@ import jsonFetcher from 'utils/jsonFetcher';
 import { getAllMainData } from 'utils/api';
 
 export async function getStaticProps() {
-  const { edges } = await getAllMainData();
+  const allMainData = await getAllMainData();
 
   return {
     props: {
-      edges
+      allMainData
     },
     revalidate: 3600
   };
 };
 
-export default function Home({ edges }) {
+export default function Home({ allMainData }) {
 
-  const { data } = useSWR('/api/main', jsonFetcher, { initialData: edges });
+  const { data } = useSWR('/api/main', jsonFetcher, { initialData: allMainData });
 
   return (
     <div>
@@ -39,10 +39,10 @@ export default function Home({ edges }) {
           <LeftTextSlider />
           <LeftTextAbout />
           <HorizontalCounters />
-          <GridService />
+          <GridService services={data?.services.edges} />
           <SimpleCompanies />
           <SliderTestimontial />
-          <NewestArticles articles={data} />
+          <NewestArticles articles={data?.posts.edges} />
         </BaseLayout>
       </main>
     </div>

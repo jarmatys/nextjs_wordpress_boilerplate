@@ -4,7 +4,7 @@ export default async (req, res) => {
     switch (req.method) {
         case 'GET': {
             const allMainData = await getAllMainData();
-            res.status(200).json(allMainData.edges);
+            res.status(200).json(allMainData);
             break;
         }
         default:

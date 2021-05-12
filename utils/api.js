@@ -1,6 +1,7 @@
 const API_URL = process.env.WP_API_URL;
 
 import { page, allPagesWithSlug } from 'utils/queries/pages';
+import { service, allServicesWithSlug, allServices } from 'utils/queries/services';
 import { allPosts, allPostsWithSlug, post, postPaginate } from 'utils/queries/posts';
 import { allMain } from 'utils/queries/main';
 
@@ -39,15 +40,17 @@ export const getPost = async (slug) => {
   return data;
 };
 
-export const getAllMainData = async () => {
-  const data = await fetchAPI(allMain);
-  return data?.posts;
-};
-
 export const getPaginatePost = async (endCursor = "") => {
   const data = await fetchAPI(postPaginate, { variables: { endCursor } });
   return data?.posts;
 }
+
+// HOME PAGE
+
+export const getAllMainData = async () => {
+  const data = await fetchAPI(allMain);
+  return data;
+};
 
 // PAGES
 
@@ -61,3 +64,19 @@ export const getPage = async (slug) => {
   return data;
 };
 
+// SERVICES
+
+export const getAllServiceWithSlug = async () => {
+  const data = await fetchAPI(allServicesWithSlug);
+  return data?.services;
+};
+
+export const getService = async (slug) => {
+  const data = await fetchAPI(service, { variables: { id: slug, idType: 'SLUG' } });
+  return data;
+};
+
+export const getAllServices = async () => {
+  const data = await fetchAPI(allServices);
+  return data?.services;
+};
