@@ -1,34 +1,33 @@
 import { useRouter } from 'next/router';
 import BaseLayout from 'components/BaseLayout';
 import MetaTags from 'components/MetaTags';
-import SingleArticle from 'components/Parts/Articles/Single';
 
-import { getAllPostsWithSlug, getPost } from 'utils/api';
+import { getAllPagesWithSlug, getPage } from 'utils/api';
 
 export async function getStaticPaths() {
-    const allPost = await getAllPostsWithSlug();
+    const allPages = await getAllPagesWithSlug();
 
     return {
-        paths: allPost.edges.map(({ node }) => `/blog/${node.slug}/`) || [],
+        paths: allPages.edges.map(({ node }) => `/${node.slug}/`) || [],
         fallback: true
     }
 };
 
 export async function getStaticProps({ params }) {
-    const data = await getPost(params.slug);
+    const data = await getPage(params.slug);
 
     return {
         revalidate: 30,
         props: {
-            postData: data.post
+            pageData: data.page
         }
     };
 };
 
-export default function BlogPage({ postData }) {
+export default function Page({ pageData }) {
     const router = useRouter();
 
-    if (!router.isFallback && !postData?.slug) {
+    if (!router.isFallback && !pageData?.slug) {
         return <p>Hmm .. error</p>;
     }
 
@@ -38,11 +37,13 @@ export default function BlogPage({ postData }) {
 
     return (
         <div>
-            <MetaTags title={postData.title} />
+            <MetaTags title={pageData.title} />
 
             <main>
                 <BaseLayout>
-                    <SingleArticle article={postData} />
+                    <section className="container mx-auto py-20">
+                        <div dangerouslySetInnerHTML={{ __html: pageData.content }}></div>
+                    </section>
                 </BaseLayout>
             </main>
         </div>

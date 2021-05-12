@@ -52,14 +52,14 @@ export default function Blog({ apiData }) {
             {posts.map(({ node }) => (
               <ItemList key={node.id} article={node} />
             ))}
+
+            {info.hasNextPage && <div className="flex justify-center mt-12 mb-12">
+              <button disabled={loading} onClick={() => loadMoreHandler(info.endCursor)} className="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold leading-loose transition duration-200">
+                {loading ? 'Please wait...' : 'Load more'}
+              </button>
+            </div>}
+            
           </section>
-
-          {info.hasNextPage && <div className="flex justify-center mt-12 mb-12">
-            <button disabled={loading}  onClick={() => loadMoreHandler(info.endCursor)} className="inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-blue-600 hover:bg-blue-700 text-gray-50 font-bold leading-loose transition duration-200">
-              {loading ? 'Please wait...' : 'Load more'}
-            </button>
-          </div>}
-
         </BaseLayout>
       </main>
     </div>
