@@ -1,6 +1,6 @@
 const API_URL = process.env.WP_API_URL;
 
-import { allPosts, allPostsWithSlug, post } from 'utils/queries/posts';
+import { allPosts, allPostsWithSlug, post, postPaginate } from 'utils/queries/posts';
 import { allMain } from 'utils/queries/main';
 
 const fetchAPI = async (query, { variables } = {}) => {
@@ -40,4 +40,9 @@ export const getAllMainData = async () => {
   const data = await fetchAPI(allMain);
   return data?.posts;
 };
+
+export const getPaginatePost = async (endCursor = "") => {
+  const data = await fetchAPI(postPaginate, { variables: { endCursor } });
+  return data?.posts;
+}
 

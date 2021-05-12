@@ -1,6 +1,6 @@
 export const allPosts = `
     query AllPosts {
-      posts(first: 20, where: {orderby: {field: DATE, order: DESC}}) {
+      posts(first: 10000, where: {orderby: {field: DATE, order: DESC}}, after: "") {
         edges {
           node {
             id
@@ -15,10 +15,10 @@ export const allPosts = `
               }
             }
           }
-        }
+        }       
       }
     }
-    `;
+`;
 
 export const allPostsWithSlug = `
   {
@@ -50,4 +50,30 @@ export const post = `
         content
       }
     }
-  `;
+`;
+
+export const postPaginate = `
+    query PaginatePost($endCursor: String!) {
+      posts(after: $endCursor, first: 4) {
+      edges {
+              node {
+                id
+                date
+                title
+                slug
+                excerpt
+                featuredImage {
+                  node {
+                    altText
+                    mediaItemUrl
+                  }
+                }
+              }
+            }
+            pageInfo {
+              endCursor
+              hasNextPage
+            }
+  }
+}
+`;
