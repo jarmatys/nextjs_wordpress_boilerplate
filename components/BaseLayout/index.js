@@ -10,7 +10,7 @@ const Navigation = () => {
 
   const menuItems = [
     {id: 1, slug: "/blog", label: "Blog"},
-    {id: 2, slug: "/blog", label: "Blog"},
+    {id: 2, slug: "/uslugi", label: "Usługi"},
     {id: 3, slug: "/blog", label: "Blog"},
     {id: 4, slug: "/blog", label: "Blog"},
     {id: 5, slug: "/blog", label: "Blog"}
