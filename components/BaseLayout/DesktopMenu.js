@@ -1,17 +1,18 @@
 import Link from 'next/link';
+import React from 'react';
 
 export default function DesktopMenu({ items }) {
     return (
         <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
             {items.map((item, index) => {
                 if (index === items.length - 1) {
-                    return <MenuItem key={item.id} item={item} />;
+                    return <MenuItem key={item.id} item={item} index={index} />;
                 } else {
                     return (
-                        <>
-                            <MenuItem key={item.id} item={item} />
-                            <MenuDivder key={item.id + "Divider"} />
-                        </>
+                        <React.Fragment key={item.id}>
+                            <MenuItem item={item} />
+                            <MenuDivder />
+                        </React.Fragment>
                     )
                 }
             })}
