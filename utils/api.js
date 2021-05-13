@@ -4,6 +4,7 @@ import { page, allPagesWithSlug } from 'utils/queries/pages';
 import { service, allServicesWithSlug, allServices } from 'utils/queries/services';
 import { allPosts, allPostsWithSlug, post, postPaginate } from 'utils/queries/posts';
 import { allMain } from 'utils/queries/main';
+import { mainMenu } from 'utils/queries/menu';
 
 const fetchAPI = async (query, { variables } = {}) => {
   const headers = { 'Content-Type': 'application/json' };
@@ -79,4 +80,11 @@ export const getService = async (slug) => {
 export const getAllServices = async () => {
   const data = await fetchAPI(allServices);
   return data?.services;
+};
+
+// MENU
+
+export const getMainMenu = async () => {
+  const data = await fetchAPI(mainMenu);
+  return data?.menuItems;
 };

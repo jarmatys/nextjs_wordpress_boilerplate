@@ -13,7 +13,7 @@ export default function Grid({ services }) {
         }
     };
 
-    if (countArticles(articles) >= 6) {
+    if (countServices(services) >= 6) {
         return (
             <section>
                 <div className="py-20 bg-gray-100 radius-for-skewed">

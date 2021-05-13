@@ -8,6 +8,14 @@ import MobileMenu from 'components/BaseLayout/MobileMenu';
 const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
+  const menuItems = [
+    {id: 1, slug: "/blog", label: "Blog"},
+    {id: 2, slug: "/blog", label: "Blog"},
+    {id: 3, slug: "/blog", label: "Blog"},
+    {id: 4, slug: "/blog", label: "Blog"},
+    {id: 5, slug: "/blog", label: "Blog"}
+  ]
+
   return (
     <section className="sticky top-0 z-50 border-b-2 border-gray-200 bg-white">
       <section className="container mx-auto">
@@ -28,11 +36,11 @@ const Navigation = () => {
               </svg>
             </button>
           </div>
-          <DesktopMenu />
+          <DesktopMenu items={menuItems} />
           <Link href="/contact" as="/kontakt">
             <a className="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
               Kontakt
-          </a>
+            </a>
           </Link>
         </nav>
       </section>
@@ -59,7 +67,7 @@ const Navigation = () => {
             </button>
           </div>
           <div>
-            <MobileMenu />
+            <MobileMenu items={menuItems} />
           </div>
           <div className="mt-auto">
             <div className="pt-6">
@@ -70,7 +78,7 @@ const Navigation = () => {
               </Link>
             </div>
             <p className="my-4 text-xs text-center text-gray-400">
-              <span>&copy; 2020 All rights reserved.</span>
+              <span>&copy; 2021 All rights reserved.</span>
             </p>
           </div>
         </nav>

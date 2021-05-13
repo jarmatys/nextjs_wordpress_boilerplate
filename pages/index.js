@@ -17,7 +17,6 @@ import { getAllMainData } from 'utils/api';
 
 export async function getStaticProps() {
   const allMainData = await getAllMainData();
-
   return {
     props: {
       allMainData
@@ -33,7 +32,6 @@ export default function Home({ allMainData }) {
   return (
     <div>
       <MetaTags title="Home page" />
-
       <main>
         <BaseLayout>
           <LeftTextSlider />
@@ -46,6 +44,5 @@ export default function Home({ allMainData }) {
         </BaseLayout>
       </main>
     </div>
-
   );
 }
