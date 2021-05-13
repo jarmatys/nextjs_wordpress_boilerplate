@@ -39,7 +39,7 @@ export default function Home({ allMainData }) {
           <HorizontalCounters />
           <GridService services={data?.services.edges} />
           <SimpleCompanies />
-          <SliderTestimontial />
+          <SliderTestimontial testimontials={data?.testiomontials.edges} />
           <NewestArticles articles={data?.posts.edges} />
         </BaseLayout>
       </main>
