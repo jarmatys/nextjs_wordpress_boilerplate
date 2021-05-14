@@ -1,13 +1,26 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
-import Joi from 'joi';
+import className from 'classnames';
 
-export default function Form() { 
+export default function Form() {
     const contactForm = useRef();
 
     const [formProcessing, setFormProcessing] = useState(false);
     const [errors, setErrors] = useState();
     const [status, setStatus] = useState();
+
+    const checkIfErrorExist = (errors, name) => {
+        let result = false;
+        if(errors){ 
+            let errorsList = Object.entries(errors);
+            errorsList.forEach((error) => {
+                if(error[1].context.key == name){
+                    result = true;
+                }
+            })
+        }
+        return result;
+    }
 
     const onClickHandler = async (e) => {
         e.preventDefault();
@@ -41,7 +54,6 @@ export default function Form() {
         } else {
             const result = await response.json();
             setErrors(result.error?.details);
-            console.log(result);
         }
     };
 
@@ -56,16 +68,16 @@ export default function Form() {
                         <h3 className="mb-6 text-2xl">Got any question? Let's talk about it.</h3>
                         <form ref={contactForm}>
                             <div className="mb-4">
-                                <input className="border border-red-700 w-full p-6  font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Subject" name="subject" />
+                                <input className={className("w-full p-6  font-semibold leading-none bg-white rounded outline-none", { "border border-red-700": checkIfErrorExist(errors, "subject") })} type="text" placeholder="Subject" name="subject" />
                             </div>
                             <div className="mb-4">
-                                <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="text" placeholder="Name" name="name" />
+                                <input className={className("w-full p-6  font-semibold leading-none bg-white rounded outline-none", { "border border-red-700": checkIfErrorExist(errors, "name") })} type="text" placeholder="Name" name="name" />
                             </div>
                             <div className="mb-4">
-                                <input className="w-full p-6 font-semibold leading-none bg-white rounded outline-none" type="email" placeholder="name@example.com" name="email" />
+                                <input className={className("w-full p-6  font-semibold leading-none bg-white rounded outline-none", { "border border-red-700": checkIfErrorExist(errors, "email") })} type="email" placeholder="name@example.com" name="email" />
                             </div>
                             <div className="mb-4">
-                                <textarea className="w-full h-24 p-4 font-semibold leading-none resize-none bg-white rounded outline-none" type="text" placeholder="Message..." name="message" />
+                                <textarea className={className("w-full h-24 p-4 font-semibold leading-none resize-none bg-white rounded outline-none", { "border border-red-700": checkIfErrorExist(errors, "message") })} type="text" placeholder="Message..." name="message" />
                             </div>
                             <div className="mb-4">
                                 <label>
