@@ -1,19 +1,21 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import classNames from 'classnames';
-import DesktopMenu from 'components/BaseLayout/DesktopMenu';
-import MobileMenu from 'components/BaseLayout/MobileMenu';
+import DesktopMenu from 'components/BaseLayout/Parts/DesktopMenu';
+import MobileMenu from 'components/BaseLayout/Parts/MobileMenu';
+import FooterMenu from 'components/BaseLayout/Parts/FooterMenu';
+import Hamburger from 'components/BaseLayout/Parts/Hamburger';
+import SocialMedia from 'components/BaseLayout/Parts/SocialMedia';
 
 const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
-  const menuItems = [
-    {id: 1, slug: "/blog", label: "Blog"},
-    {id: 2, slug: "/uslugi", label: "Usługi"},
-    {id: 3, slug: "/blog", label: "Blog"},
-    {id: 4, slug: "/blog", label: "Blog"},
-    {id: 5, slug: "/blog", label: "Blog"}
+  const mainMenuItems = [
+    { id: 1, slug: "/blog", label: "Blog" },
+    { id: 2, slug: "/uslugi", label: "Usługi" },
+    { id: 3, slug: "/blog", label: "Blog" },
+    { id: 4, slug: "/blog", label: "Blog" },
+    { id: 5, slug: "/blog", label: "Blog" }
   ]
 
   return (
@@ -24,19 +26,9 @@ const Navigation = () => {
             <a className="text-3xl font-bold leading-none">Nazwa firmy</a>
           </Link>
           <div className="lg:hidden">
-            <button
-              onClick={() => setNavOpen(true)}
-              className="navbar-burger flex items-center text-blue-600 p-3">
-              <svg
-                className="block h-4 w-4 fill-current"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <title>Mobile menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-              </svg>
-            </button>
+            <Hamburger onClick={() => setNavOpen(true)} />
           </div>
-          <DesktopMenu items={menuItems} />
+          <DesktopMenu items={mainMenuItems} />
           <Link href="/contact" as="/kontakt">
             <a className="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200">
               Kontakt
@@ -51,23 +43,10 @@ const Navigation = () => {
             <a className="mr-auto text-3xl font-bold leading-none" href="/">
               Nazwa firmy
             </a>
-            <button onClick={() => setNavOpen(false)} className="navbar-close">
-              <svg
-                className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
+            <Hamburger onClick={() => setNavOpen(false)} />
           </div>
           <div>
-            <MobileMenu items={menuItems} />
+            <MobileMenu items={mainMenuItems} />
           </div>
           <div className="mt-auto">
             <div className="pt-6">
@@ -88,6 +67,15 @@ const Navigation = () => {
 };
 
 const Footer = () => {
+
+  const footerMenuItems = [
+    { id: 1, slug: "/blog", label: "Blog" },
+    { id: 2, slug: "/uslugi", label: "Usługi" },
+    { id: 3, slug: "/blog", label: "Blog" },
+    { id: 4, slug: "/kontakt", label: "Kontakt" },
+    { id: 5, slug: "/polityka-prywatnosci/", label: "Polityka prywatności" }
+  ]
+
   return (
     <section>
       <div className="py-20 bg-gray-100 radius-for-skewed">
@@ -99,48 +87,12 @@ const Footer = () => {
               </Link>
             </div>
             <div className="w-full lg:w-auto">
-              <ul className="flex flex-wrap lg:space-x-5 items-center">
-                <li className="w-full md:w-auto mb-2 md:mb-0"><a className="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Start</a></li>
-                <li className="hidden md:block">
-                  <svg className="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
-                  </svg>
-                </li>
-                <li className="w-full md:w-auto mb-2 md:mb-0"><a className="lg:text-sm text-gray-400 hover:text-gray-500" href="#">About Us</a></li>
-                <li className="hidden md:block">
-                  <svg className="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
-                  </svg>
-                </li>
-                <li className="w-full md:w-auto mb-2 md:mb-0"><a className="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
-                <li className="hidden md:block">
-                  <svg className="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
-                  </svg>
-                </li>
-                <li className="w-full md:w-auto mb-2 md:mb-0"><a className="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Platform</a></li>
-                <li className="hidden md:block">
-                  <svg className="mx-4 w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
-                  </svg>
-                </li>
-                <li><a className="lg:text-sm text-gray-400 hover:text-gray-500" href="#">Testimonials</a></li>
-              </ul>
+              <FooterMenu items={footerMenuItems} />
             </div>
           </div>
           <div className="mt-8 flex flex-wrap justify-between items-center">
             <p className="order-last text-sm text-gray-400">&copy; 2021. All rights reserved.</p>
-            <div className="mb-4 lg:mb-0 order-first lg:order-last">
-              <a className="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
-                <Image src="/facebook.svg" height={22} width={22} />
-              </a>
-              <a className="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
-                <Image src="/twitter.svg" height={22} width={22} />
-              </a>
-              <a className="inline-block mr-2 p-2 bg-gray-50 hover:bg-gray-100 rounded" href="#">
-                <Image src="/instagram.svg" height={22} width={22} />
-              </a>
-            </div>
+            <SocialMedia />
           </div>
         </div>
       </div>
