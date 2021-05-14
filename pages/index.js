@@ -11,7 +11,7 @@ import HorizontalCounters from 'components/Parts/Counters/Horizontal';
 import NewestArticles from 'components/Parts/Articles/Newest';
 
 import useSWR from 'swr';
-import jsonFetcher from 'utils/jsonFetcher';
+import { jsonFetcher } from 'utils/general';
 
 import { getAllMainData } from 'utils/api';
 
@@ -35,9 +35,9 @@ export default function Home({ allMainData }) {
       <main>
         <BaseLayout>
           <LeftTextSlider />
-          <LeftTextAbout />
+          <LeftTextAbout id="about" />
           <HorizontalCounters />
-          <GridService services={data?.services.edges} />
+          <GridService id="services" services={data?.services.edges} />
           <SimpleCompanies />
           <SliderTestimontial testimontials={data?.testiomontials.edges} />
           <NewestArticles articles={data?.posts.edges} />

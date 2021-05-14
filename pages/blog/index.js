@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 import dynamic from 'next/dynamic'
-import jsonFetcher from 'utils/jsonFetcher';
+import { jsonFetcher } from 'utils/general';
 import BaseLayout from 'components/BaseLayout';
 import MetaTags from 'components/MetaTags';
 import { getPaginatePost } from 'utils/api';
@@ -58,7 +58,7 @@ export default function Blog({ apiData }) {
                 {loading ? 'Please wait...' : 'Load more'}
               </button>
             </div>}
-            
+
           </section>
         </BaseLayout>
       </main>

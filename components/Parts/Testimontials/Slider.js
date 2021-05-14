@@ -1,7 +1,7 @@
 import SingleTestimontial from 'components/Parts/Testimontials/Single';
 import { useState } from 'react';
 import classNames from 'classnames';
-import { countTestimontials } from 'utils/testimontials';
+import { countTestimontials } from 'utils/views/testimontials';
 
 export default function Slider({ testimontials }) {
 

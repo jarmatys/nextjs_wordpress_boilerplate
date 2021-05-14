@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import ItemNewest from 'components/Parts/Articles/ItemNewest';
-import { countArticles } from 'utils/articles';
+import { countArticles } from 'utils/views/articles';
 
 export default function Newest({ articles }) {
 

@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import Link from 'next/link';
-import jsonFetcher from 'utils/jsonFetcher';
+import { jsonFetcher } from 'utils/general';
 import BaseLayout from 'components/BaseLayout';
 import MetaTags from 'components/MetaTags';
 import { getAllServices } from 'utils/api';

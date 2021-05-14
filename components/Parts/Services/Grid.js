@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 import SingleService from 'components/Parts/Services/Single';
-import { countServices } from 'utils/services';
+import { countServices } from 'utils/views/services';
 
-export default function Grid({ services }) {
+export default function Grid({ services, id }) {
 
     const renderServices = (services) => {
         if (countServices(services) >= 6) {
@@ -15,7 +15,7 @@ export default function Grid({ services }) {
 
     if (countServices(services) >= 6) {
         return (
-            <section>
+            <section id={id}>
                 <div className="py-20 bg-gray-100 radius-for-skewed">
                     <div className="container mx-auto px-4">
                         <div className="mb-16 flex flex-wrap justify-center md:justify-between items-center">

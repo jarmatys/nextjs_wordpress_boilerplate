@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { scrollTo } from 'utils/general';
 
 export default function LeftText() {
     return (
@@ -17,12 +18,12 @@ export default function LeftText() {
                             <div className="relative max-w-sm mx-auto lg:mx-0">
                                 <p className="mb-6 text-gray-400 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                                 <div>
-                                    <a className="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">
-                                        Get Started
-                                    </a>
-                                    <a className="inline-block w-full lg:w-auto py-2 px-6 leading-loose font-semibold bg-white hover:bg-gray-50 rounded-l-xl rounded-t-xl transition duration-200" href="#">
-                                        How it works
-                                    </a>
+                                    <div onClick={() => scrollTo("about")} className="cursor-pointer inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200">
+                                        About me
+                                    </div>
+                                    <div onClick={() => scrollTo("services")} className="cursor-pointer inline-block w-full lg:w-auto py-2 px-6 leading-loose font-semibold bg-white hover:bg-gray-50 rounded-l-xl rounded-t-xl transition duration-200">
+                                        Show my services
+                                    </div>
                                 </div>
                             </div>
                         </div>
