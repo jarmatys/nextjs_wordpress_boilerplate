@@ -46,7 +46,7 @@ export default function Form() {
     };
 
     return (
-        <section className="relative py-10 lg:h-screen container mx-auto">
+        <section className="relative lg:h-screen container mx-auto">
             <div className="hidden lg:flex items-center absolute inset-0 w-2/5 bg-white">
                 <Image className="mx-auto" src="/technical-support-dark-green.png" alt="" height={342} width={465} />
             </div>
