@@ -1,7 +1,5 @@
 import Image from 'next/image';
-
 import { formatDate } from 'utils/date';
-import { addTailwindClassToRawHtml } from 'utils/gutenberg';
 
 export default function Single({ article }) {
     return (
@@ -14,7 +12,7 @@ export default function Single({ article }) {
                         <h3 className="mb-4 text-2xl font-bold font-heading">{formatDate(article.date)}</h3>
                     </div>
                     <div>
-                        <div dangerouslySetInnerHTML={{ __html: addTailwindClassToRawHtml(article.content) }} />
+                        <div className="wordpressArticle" dangerouslySetInnerHTML={{ __html: article.content }} />
                     </div>
                 </div>
             </div>

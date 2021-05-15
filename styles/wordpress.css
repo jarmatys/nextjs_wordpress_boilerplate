@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+.wordpressArticle h1 {
+  @apply mb-3 mt-3 text-4xl lg:text-5xl font-bold font-heading;
+}
+
+.wordpressArticle h2 {
+  @apply mb-3 mt-3 text-3xl lg:text-4xl font-bold font-heading;
+}
+
+.wordpressArticle h3 {
+  @apply mb-2 mt-2 text-2xl lg:text-3xl font-bold font-heading;
+}
+
+.wordpressArticle h4 {
+  @apply mb-2 mt-2 text-xl lg:text-2xl font-bold font-heading;
+}
+
+.wordpressArticle h5 {
+  @apply mb-1 mt-1 text-xl lg:text-2xl font-bold font-heading;
+}
+
+.wordpressArticle p {
+  @apply mb-4 mt-4;
+}
+
+.wordpressArticle figcaption {
+  @apply text-center mt-1;
+}
+
+.wordpressArticle ul {
+  @apply list-disc mt-3 mb-3 ml-10;
+}
+
+.wordpressArticle ol {
+  @apply list-decimal mt-3 mb-3 ml-10;
+}
