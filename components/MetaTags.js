@@ -8,7 +8,7 @@ export default function MetaTags({ title }) {
 
             <meta name="description" content="" />
             <meta property="og:type" content="website" />
-            <meta name="og:title" property="og:title" content="" />
+            <meta name="og:title" property="og:title" content={title} />
             <meta name="og:description" property="og:description" content="" />
             <meta property="og:site_name" content="" />
             <meta property="og:url" content="" />
