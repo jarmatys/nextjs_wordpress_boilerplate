@@ -23,7 +23,7 @@ const Navigation = () => {
       <section className="container mx-auto">
         <nav className="px-6 py-6 flex justify-between items-center ">
           <Link href="/">
-            <a className="text-3xl font-bold leading-none">Ubezpieczenia</a>
+            <a className="text-3xl font-bold leading-none">Nazwa strony</a>
           </Link>
           <div className="lg:hidden">
             <Hamburger onClick={() => setNavOpen(true)} />
@@ -83,7 +83,7 @@ const Footer = () => {
           <div className="pb-12 flex flex-wrap items-center justify-between border-b border-gray-100">
             <div className="w-full lg:w-1/5 mb-12 lg:mb-4">
               <Link href="/">
-                <a className="text-3xl font-bold leading-none">Ubezpieczenia</a>
+                <a className="text-3xl font-bold leading-none">Nazwa strony</a>
               </Link>
             </div>
             <div className="w-full lg:w-auto">

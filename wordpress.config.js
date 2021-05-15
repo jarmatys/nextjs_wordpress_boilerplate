@@ -1,3 +1,3 @@
 export default {
-   pageName: "Ubezpieczenia z rabatem"
+   pageName: "Nazwa strony"
 };
