@@ -2,6 +2,22 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-6deg)" },
+          "50%": { transform: "rotate(6deg)" }
+        },
+        slide: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: ".25", transform: "translateX(10px)" }
+        }
+      },
+      animation: {
+        wiggle: "wiggle 200ms ease-in-out",
+        slide: "slide 400ms"
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',

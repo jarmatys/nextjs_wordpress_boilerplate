@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import BaseLayout from 'components/BaseLayout';
 import MetaTags from 'components/MetaTags';
 import LeftTextSlider from 'components/Parts/Sliders/LeftText';

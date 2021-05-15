@@ -9,6 +9,7 @@ export default function Slider({ testimontials }) {
     const [firstTestimontial, setFirstTestimontial] = useState(0);
     const [showLeftArrow, setShowLeftArrow] = useState(false);
     const [showRightArrow, setShowRightArrow] = useState(true);
+    const [slide, setSlide] = useState(false);
 
     const handleLeftArrow = (firstTestimontial) => {
         let postion = firstTestimontial - 1;
@@ -19,6 +20,8 @@ export default function Slider({ testimontials }) {
             setShowRightArrow(true);
             setShowLeftArrow(false);
         }
+
+        setSlide(true);
     }
 
     const handleRightArrow = (firstTestimontial) => {
@@ -33,6 +36,8 @@ export default function Slider({ testimontials }) {
         if (firstTestimontial === 0) {
             setShowLeftArrow(true);
         }
+
+        setSlide(true);
     }
 
     if (countTestimontials(testimontials) >= 3) {
@@ -64,7 +69,7 @@ export default function Slider({ testimontials }) {
                     <div className="relative flex">
                         <div className="flex flex-wrap max-w-6xl px-2 mx-auto">
                             {currentTestimontials.map((testimontial) => {
-                                return <SingleTestimontial key={testimontial.node.id} testimontial={testimontial.node} />;
+                                return <SingleTestimontial key={testimontial.node.id} testimontial={testimontial.node} slide={slide} />;
                             })}
                         </div>
                     </div>

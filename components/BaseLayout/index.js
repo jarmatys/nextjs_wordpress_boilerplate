@@ -13,7 +13,7 @@ const Navigation = () => {
   const mainMenuItems = [
     { id: 1, slug: "/blog", label: "Blog" },
     { id: 2, slug: "/uslugi", label: "Usługi" },
-    { id: 3, slug: "/blog", label: "Blog" },
+    { id: 3, slug: "/test", label: "Test" },
     { id: 4, slug: "/blog", label: "Blog" },
     { id: 5, slug: "/blog", label: "Blog" }
   ]

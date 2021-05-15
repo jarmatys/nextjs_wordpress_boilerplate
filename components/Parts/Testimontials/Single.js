@@ -1,6 +1,8 @@
-export default function Single({ testimontial }) {
+import classNames from 'classnames';
+
+export default function Single({ testimontial, slide }) {
     return (
-        <div className="mb-4 w-full lg:w-1/3 px-3">
+        <div className={classNames("mb-4 w-full lg:w-1/3 px-3", {"animate-slide": slide})}>
             <div className="p-8 bg-white rounded shadow text-center">
                 <div>
                     <p className="mb-8 text-gray-500 leading-loose">{testimontial.addons.text}</p>
