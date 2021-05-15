@@ -6,7 +6,7 @@ export default function ItemNewest({ article }) {
     return (
         <div className="mb-6 w-full lg:w-1/4 px-3">
             <div className="rounded overflow-hidden shadow">
-                <div className="lg:h-48 w-80 rounded-t relative">
+                <div className="lg:h-48 w-80 relative rounded">
                     <Image src={article.featuredImage?.node?.mediaItemUrl} alt={article.featuredImage?.node?.altText} layout="fill" objectFit="cover" />
                 </div>
                 <div className="p-6 rounded-b bg-white">

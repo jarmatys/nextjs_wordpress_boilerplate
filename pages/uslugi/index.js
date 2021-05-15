@@ -1,11 +1,11 @@
 import useSWR from 'swr';
-import Link from 'next/link';
 import { jsonFetcher } from 'utils/general';
 import BaseLayout from 'components/BaseLayout';
 import MetaTags from 'components/MetaTags';
 import { getAllServices } from 'utils/api';
 
 import SimpleHeader from 'components/Parts/Breadcrumbs/Simple';
+import ItemListService from 'components/Parts/Services/ItemList';
 
 export async function getStaticProps() {
     const apiData = await getAllServices();
@@ -28,16 +28,21 @@ export default function Services({ apiData }) {
             <main>
                 <BaseLayout>
                     <SimpleHeader h2Text="List of services" spanText="All my services" />
-                    <section className="container mx-auto">
-                        {data.edges.map(({ node }) => (
-                            <div className="py-6" key={node.id}>
-                                <p>{node.title}</p>
-                                <Link href={`/uslugi/${node.slug}`}>
-                                    <a>Link</a>
-                                </Link>
+
+                    <section>
+                        <div className="my-12 radius-for-skewed">
+                            <div className="container mx-auto px-4">
+                                <div className="flex flex-wrap -mx-3">
+                                    <div className="w-full px-3">
+                                        {data.edges.map(({ node }) => (
+                                            <ItemListService key={node.id} service={node} />
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        ))}
+                        </div>
                     </section>
+
                 </BaseLayout>
             </main>
         </div>
