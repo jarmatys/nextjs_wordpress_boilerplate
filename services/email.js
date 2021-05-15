@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import wordpress from 'wordpress.config';
 
-const { EMAIL_HOST, EMAIL_PORT, EMAIL_AUTH_USER, EMAL_AUTH_PASS } = process.env;
+const { EMAIL_HOST, EMAIL_PORT, EMAIL_AUTH_USER, EMAIL_AUTH_PASS } = process.env;
 
 const RECIVER = "jarekarmatys@gmail.com";
 
@@ -13,7 +13,7 @@ export const sendEmail = async (message) => {
         secure: true,
         auth: {
             user: EMAIL_AUTH_USER,
-            pass: EMAL_AUTH_PASS
+            pass: EMAIL_AUTH_PASS
         },
         tls: {
             rejectUnauthorized: false
