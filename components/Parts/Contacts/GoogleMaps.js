@@ -1,9 +1,5 @@
-import {
-    withScriptjs,
-    withGoogleMap,
-    GoogleMap,
-    Marker
-} from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+const { NEXT_PUBLIC_GOOGLE_API_KEY } = process.env;
 
 const defaultCenter = { lat: 50.0683755, lng: 18.2755449 };
 
@@ -34,7 +30,7 @@ export default function GoogleMaps() {
                         <span className="text-blue-600 font-bold">Dolor sit amet consectutar</span>
                         <h2 className=" mb-16 text-4xl lg:text-5xl font-bold font-heading">Finds us on map</h2>
                         <RegularMap
-                            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRXPZY69d1vQM6zYpFKP_mS9nN-nLj7dc"
+                            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${NEXT_PUBLIC_GOOGLE_API_KEY}`}
                             loadingElement={<div style={loadingElementStyle} />}
                             containerElement={<div style={containerElementStyle} />}
                             mapElement={<div style={mapElementStyle} />
