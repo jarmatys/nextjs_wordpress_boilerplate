@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Section from 'components/Section';
 
 export default function LeftText({ id }) {
     return (
-        <section id={id}>
+        <Section id={id}>
             <div className="py-20 bg-gray-50 radius-for-skewed">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap items-center -mx-4">
@@ -59,7 +60,7 @@ export default function LeftText({ id }) {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }
 

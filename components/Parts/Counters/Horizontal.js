@@ -1,6 +1,8 @@
+import Section from 'components/Section';
+
 export default function Horizontal() {
     return (
-        <section className="py-20">
+        <Section className="py-20">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap -mx-4">
                     <div className="mb-8 flex items-center lg:justify-center w-full md:w-1/2 lg:w-1/4 px-4">
@@ -50,7 +52,6 @@ export default function Horizontal() {
                     </div>
                 </div>
             </div>
-        </section>
-
+        </Section>
     )
 }

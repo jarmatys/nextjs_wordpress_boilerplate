@@ -11,11 +11,16 @@ module.exports = {
         slide: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: ".25", transform: "translateX(10px)" }
+        },
+        slideIn: {
+          "0%": { opacity: ".10", transform: "translateX(200px)" },
+          "100%": { opacity: "1" }
         }
       },
       animation: {
         wiggle: "wiggle 200ms ease-in-out",
-        slide: "slide 400ms"
+        slide: "slide 400ms",
+        slideIn: "slideIn 1s"
       }
     },
     screens: {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import ItemNewest from 'components/Parts/Articles/ItemNewest';
 import { countArticles } from 'utils/views/articles';
+import Section from 'components/Section';
 
 export default function Newest({ articles }) {
 
@@ -15,7 +16,7 @@ export default function Newest({ articles }) {
 
     if (countArticles(articles) >= 4) {
         return (
-            <section>
+            <Section>
                 <div className="py-20 bg-gray-50 radius-for-skewed">
                     <div className="container mx-auto px-4">
                         <div className="mb-6 flex flex-wrap justify-center">
@@ -38,7 +39,7 @@ export default function Newest({ articles }) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Section>
         )
     } else {
         return (null);
