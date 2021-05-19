@@ -14,7 +14,7 @@ const Navigation = ({ isIndex }) => {
     { id: 1, slug: "/", label: "O mnie", isRedirect: false, destination: "about", isIndex },
     { id: 2, slug: "/uslugi", label: "Usługi", isRedirect: true, destination: null, isIndex },
     { id: 3, slug: "/", label: "Opinie", isRedirect: false, destination: "testimontials", isIndex },
-    { id: 4, slug: "/", label: "Do pobrania", isRedirect: false, destination: "", isIndex },
+    { id: 4, slug: "/", label: "Do pobrania", isRedirect: true, destination: null, isIndex },
     { id: 5, slug: "/blog", label: "Blog", isRedirect: true, destination: null, isIndex }
   ]
 
