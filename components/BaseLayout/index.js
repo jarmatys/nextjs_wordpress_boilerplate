@@ -11,10 +11,10 @@ const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
   const mainMenuItems = [
-    { id: 1, slug: "/blog", label: "Blog" },
+    { id: 1, slug: "/", label: "O mnie" },
     { id: 2, slug: "/uslugi", label: "Usługi" },
-    { id: 3, slug: "/test", label: "Test" },
-    { id: 4, slug: "/blog", label: "Blog" },
+    { id: 3, slug: "/", label: "Opinie" },
+    { id: 4, slug: "/", label: "Do pobrania" },
     { id: 5, slug: "/blog", label: "Blog" }
   ]
 
