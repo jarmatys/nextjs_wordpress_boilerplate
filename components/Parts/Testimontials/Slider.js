@@ -67,9 +67,9 @@ export default function Slider({ testimontials }) {
                         </div>
                     </div>
                     <div className="relative flex">
-                        <div className="flex flex-wrap max-w-6xl px-2 mx-auto">
+                        <div className={classNames("flex flex-wrap max-w-6xl px-2 mx-auto", {"animate-slide": slide})} onAnimationEnd={() => setSlide(false)}>
                             {currentTestimontials.map((testimontial) => {
-                                return <SingleTestimontial key={testimontial.node.id} testimontial={testimontial.node} slide={slide} />;
+                                return <SingleTestimontial key={testimontial.node.id} testimontial={testimontial.node} />;
                             })}
                         </div>
                     </div>
