@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { scrollTo } from 'utils/general';
 
 export default function DesktopMenu({ items }) {
     return (
@@ -31,13 +32,29 @@ const MenuDivder = () => {
 };
 
 const MenuItem = ({ item }) => {
-    return (
-        <li>
-            <Link href={item.slug}>
-                <a className="text-sm text-gray-400 hover:text-gray-500">
-                    {item.label}
-                </a>
-            </Link>
-        </li>
-    )
+    if (item.isRedirect) {
+        return (
+            <li>
+                <Link href={item.slug}>
+                    <a className="text-sm text-gray-400 hover:text-gray-500">
+                        {item.label}
+                    </a>
+                </Link>
+            </li>
+        )
+    }
+    else {
+        if(item.isIndex){
+            return (
+                <li>
+                    <a onClick={() => scrollTo(item.destination)} className="text-sm text-gray-400 hover:text-gray-500 cursor-pointer">
+                        {item.label}
+                    </a>
+                </li>
+            )
+        } else {
+            return null;
+        }
+        
+    }
 }

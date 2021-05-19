@@ -31,13 +31,13 @@ export default function Home({ allMainData }) {
     <div>
       <MetaTags title="Home page" />
       <main>
-        <BaseLayout>
+        <BaseLayout isIndex={true}>
           <LeftTextSlider />
           <LeftTextAbout id="about" />
           <HorizontalCounters />
           <GridService id="services" services={data?.services.edges} />
           <SimpleCompanies />
-          <SliderTestimontial testimontials={data?.testiomontials.edges} />
+          <SliderTestimontial id="testimontials" testimontials={data?.testiomontials.edges} />
           <NewestArticles articles={data?.posts.edges} />
         </BaseLayout>
       </main>

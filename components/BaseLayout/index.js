@@ -7,15 +7,15 @@ import FooterMenu from 'components/BaseLayout/Parts/FooterMenu';
 import Hamburger from 'components/BaseLayout/Parts/Hamburger';
 import SocialMedia from 'components/BaseLayout/Parts/SocialMedia';
 
-const Navigation = () => {
+const Navigation = ({ isIndex }) => {
   const [isNavOpen, setNavOpen] = useState(false);
 
   const mainMenuItems = [
-    { id: 1, slug: "/", label: "O mnie" },
-    { id: 2, slug: "/uslugi", label: "Usługi" },
-    { id: 3, slug: "/", label: "Opinie" },
-    { id: 4, slug: "/", label: "Do pobrania" },
-    { id: 5, slug: "/blog", label: "Blog" }
+    { id: 1, slug: "/", label: "O mnie", isRedirect: false, destination: "about", isIndex },
+    { id: 2, slug: "/uslugi", label: "Usługi", isRedirect: true, destination: null, isIndex },
+    { id: 3, slug: "/", label: "Opinie", isRedirect: false, destination: "testimontials", isIndex },
+    { id: 4, slug: "/", label: "Do pobrania", isRedirect: false, destination: "", isIndex },
+    { id: 5, slug: "/blog", label: "Blog", isRedirect: true, destination: null, isIndex }
   ]
 
   return (
@@ -100,12 +100,12 @@ const Footer = () => {
   );
 };
 
-export default function Home({ children }) {
+export default function Home({ children, isIndex = false}) {
   return (
-    <div className="">
-      <Navigation />
+    <>
+      <Navigation isIndex={isIndex} />
       <div>{children}</div>
       <Footer />
-    </div>
+    </>
   );
 }

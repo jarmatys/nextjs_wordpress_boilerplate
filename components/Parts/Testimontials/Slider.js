@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { countTestimontials } from 'utils/views/testimontials';
 import Section from 'components/Section';
 
-export default function Slider({ testimontials }) {
+export default function Slider({ testimontials, id }) {
 
     const [currentTestimontials, setCurrentTestimontials] = useState(testimontials.slice(0, 3))
     const [firstTestimontial, setFirstTestimontial] = useState(0);
@@ -43,7 +43,7 @@ export default function Slider({ testimontials }) {
 
     if (countTestimontials(testimontials) >= 3) {
         return (
-            <Section>
+            <Section id={id}>
                 <div className="py-20 bg-gray-100 radius-for-skewed overflow-hidden">
                     <div className="max-w-6xl mx-auto px-4 pb-6 lg:pb-16">
                         <div className="flex flex-wrap justify-center lg:justify-between items-center text-center lg:text-left">
